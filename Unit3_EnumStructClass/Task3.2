@@ -1,0 +1,10 @@
+enum Weekday: Int {
+    case monday = 1, tuesday, wednesday, thursday
+    case friday, saturday, sunday
+}
+
+print(Weekday.monday.rawValue)
+
+if let day = Weekday(rawValue: 3) {
+    print(day)
+}
