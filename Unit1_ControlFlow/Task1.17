@@ -1,0 +1,47 @@
+let number = 121
+var temp = number
+var reverse = 0
+
+while temp > 0 {
+    reverse = reverse * 10 + temp % 10
+    temp /= 10
+}
+
+if number >= 0 && number == reverse {
+    print("Palindrome")
+} else {
+    print("Not Palindrome")
+}
+
+
+let number = 153
+var temp = number
+var sum = 0
+var digits = 0
+
+// Count digits
+repeat {
+    digits += 1
+    temp /= 10
+} while temp > 0
+
+temp = number
+
+// Calculate Armstrong sum
+while temp > 0 {
+    let digit = temp % 10
+    var power = 1
+
+    for _ in 1...digits {
+        power *= digit
+    }
+
+    sum += power
+    temp /= 10
+}
+
+if number >= 0 && number == sum {
+    print("Armstrong Number")
+} else {
+    print("Not an Armstrong Number")
+}
